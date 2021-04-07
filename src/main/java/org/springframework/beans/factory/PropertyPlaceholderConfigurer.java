@@ -106,6 +106,7 @@ public class PropertyPlaceholderConfigurer implements BeanFactoryPostProcessor {
 			this.properties = properties;
 		}
 
+		@Override
 		public String resolveStringValue(String strVal) throws BeansException {
 			return PropertyPlaceholderConfigurer.this.resolvePlaceholder(strVal, properties);
 		}
